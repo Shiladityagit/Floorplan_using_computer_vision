@@ -2,7 +2,7 @@
 
 ## 🚀 Demo
 
-Try it live: [Streamlit App](https://<your-streamlit-cloud-url>)
+Try it live: [Streamlit App](https://3gqegbyglucte4kna9adxu.streamlit.app/)
 
 ## 🛠️ Setup Locally
 
