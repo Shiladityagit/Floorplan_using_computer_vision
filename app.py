@@ -1,5 +1,7 @@
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"  
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+
 
 import streamlit as st
 from config import MODEL_PATH, IMAGE_PATH
