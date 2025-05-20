@@ -14,7 +14,7 @@ import io
 
 # Set page layout
 st.set_page_config(layout="wide")
-st.title("🏠 YOLOv8 Floorplan to 3D Model")
+st.title("🏠 Floorplan to 3D House")
 
 # Instructions
 st.markdown("""
