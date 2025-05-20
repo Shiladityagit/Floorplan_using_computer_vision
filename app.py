@@ -31,11 +31,11 @@ st.markdown("""
 # Example images
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("assets/example1.jpg", caption="Example 1", use_column_width=True)
+    st.image("assets/example1.jpg", caption="Example 1", use_container_width=True)
 with col2:
-    st.image("assets/example2.jpg", caption="Example 2", use_column_width=True)
+    st.image("assets/example2.jpg", caption="Example 2", use_container_width=True)
 with col3:
-    st.image("assets/example3.jpg", caption="Example 3", use_column_width=True)
+    st.image("assets/example3.jpg", caption="Example 3", use_container_width=True)
 
 # File upload
 uploaded_file = st.file_uploader("📤 Upload Floor Plan Image", type=["jpg", "png"])
