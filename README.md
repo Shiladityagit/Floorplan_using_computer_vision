@@ -7,7 +7,7 @@ Try it live: [Streamlit App](https://<your-streamlit-cloud-url>)
 ## 🛠️ Setup Locally
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Shiladityagit/Floorplan_using_computer_vision.git
+cd Floorplan_using_computer_vision
 pip install -r requirements.txt
 streamlit run app.py
