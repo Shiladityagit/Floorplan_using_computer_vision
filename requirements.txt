@@ -4,3 +4,4 @@ ultralytics
 matplotlib
 opencv-python-headless
 Pillow
+libgl1
