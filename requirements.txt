@@ -1,0 +1,6 @@
+streamlit
+trimesh
+ultralytics
+matplotlib
+opencv-python-headless
+Pillow
