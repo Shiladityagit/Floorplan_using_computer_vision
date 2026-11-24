@@ -1,4 +1,4 @@
-# 🏠 2D-to-3D Architectural Floorplan Reconstruction
+# 🏠 2D-to-3D Housing Floorplan
 
 An end-to-end computer vision and procedural 3D geometry pipeline that transforms 2D raster architectural floorplans into scaled, interactive **glTF/GLB** 3D models and automated spatial diagnostic reports.
 
