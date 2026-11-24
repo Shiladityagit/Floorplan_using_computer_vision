@@ -2,7 +2,7 @@
 
 An end-to-end computer vision and procedural 3D geometry pipeline that transforms 2D raster architectural floorplans into scaled, interactive **glTF/GLB** 3D models and automated spatial diagnostic reports.
 
-🔗 **Live Interactive Application:** [Launch Streamlit App](https://3gqegbyglucte4kna9adxu.streamlit.app/)
+🔗 **Live Interactive Application:** [Application](https://3gqegbyglucte4kna9adxu.streamlit.app/)
 
 ---
 
@@ -14,12 +14,6 @@ The system bridges deep learning object detection with computational geometry th
 [2D Floorplan Input] ──▶ [YOLOv8s Object Detection] ──▶ [Spatial Coordinate Normalization] ──▶ [Trimesh 3D Extrusion] ──▶ [.GLB Mesh & PDF Report]
      (640×640 RGB)         (Rooms, Doors, Utilities)         (2D Bounding Box Extraction)         (Walls, Slabs, Doorways)      (Downloadable Outputs)
 ```
-
-1. **Architectural Element Detection (`yolo/`):** Utilizes a fine-tuned **YOLOv8s** model (`11.1M` parameters, `28.5 GFLOPs`) optimized for `640×640` inputs to detect structural zones and openings (`Bedroom`, `Living Room`, `Dining Room`, `Kitchen`, `Toilet`, `Balcony`, `Foyer`, `Study`, `Utility`, and `Door`).
-2. **Coordinate Transformation (`utils/`):** Parses raw bounding box predictions `[x_min, y_min, x_max, y_max]` and normalizes pixel coordinates into proportional 3D world-space dimensions.
-3. **Procedural 3D Mesh Generation (`builder/`):** Constructs a scene graph using **Trimesh**, generating a base foundation slab, extruding vertical wall structures (`3.0m` standard height, `0.2m` thickness), and positioning semantic door meshes (`2.5m` height) before compiling the scene into a standard binary **glTF 2.0 (`.glb`)** file.
-4. **Automated Diagnostic Reporting:** Generates a multi-page **PDF report** pairing visual detection overlays with structured bounding-box coordinate summaries.
-
 ---
 
 ## 📈 Model Performance & Evaluation
@@ -34,23 +28,6 @@ Trained on an annotated architectural floorplan dataset (`249` training / `26` v
 | **Precision** | **91.8%** |
 | **Recall** | **90.2%** |
 | **Inference Speed** | **8.6 ms / image** (Tesla P100 GPU) |
-
----
-
-## 📂 Repository Structure
-
-```text
-Floorplan_using_computer_vision/
-├── Notebooks/          # Model training, dataset preprocessing, and evaluation experiments
-├── assets/             # Pre-processed 640×640 benchmark floorplans for one-click testing
-├── builder/            # Procedural 3D mesh generation and Trimesh scene assembly logic
-├── utils/              # Image preprocessing, coordinate scaling, and PDF report utilities
-├── yolo/               # Trained YOLOv8s model weights and inference wrappers
-├── app.py              # Main Streamlit web application entry point
-├── config.py           # Global hyperparameters, class mappings, and 3D extrusion constants
-├── packages.txt        # System-level dependencies for cloud deployment
-└── requirements.txt    # Python package dependencies
-```
 
 ---
 
@@ -93,11 +70,3 @@ Floorplan_using_computer_vision/
 3. **Export:**
    * **`.glb` 3D Model:** Compatible with Blender, Three.js, Windows 3D Viewer, and web-based glTF viewers.
    * **2-Page PDF Report:** Contains the annotated detection overlay (Page 1) and extracted spatial coordinates (Page 2).
-
----
-
-## 🗺️ Future Roadmap
-
-* [ ] **Boolean Wall Cutouts & Merging:** Deduplicate shared interior walls and perform CSG boolean subtraction for realistic door and window openings.
-* [ ] **Instance Segmentation (`YOLOv8-seg`):** Transition from axis-aligned bounding boxes to polygon masks to support non-rectangular and L-shaped room geometries.
-* [ ] **OCR Dimension Parsing:** Extract textual room dimensions from floorplans to calibrate 3D meshes to exact real-world metric/imperial scales.
