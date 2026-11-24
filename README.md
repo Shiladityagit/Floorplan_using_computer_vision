@@ -1,10 +1,5 @@
 # 🏠 2D-to-3D Architectural Floorplan Reconstruction
 
-[![Streamlit App](https://streamlit.io)](https://3gqegbyglucte4kna9adxu.streamlit.app/)
-[![Python](https://shields.io)](https://python.org)
-[![YOLOv8](https://shields.io)](https://github.com)
-[![Trimesh](https://shields.io)](https://trimsh.org)
-
 An end-to-end computer vision and procedural 3D geometry pipeline that transforms 2D raster architectural floorplans into scaled, interactive **glTF/GLB** 3D models and automated spatial diagnostic reports.
 
 🔗 **Live Interactive Application:** [Launch Streamlit App](https://3gqegbyglucte4kna9adxu.streamlit.app/)
